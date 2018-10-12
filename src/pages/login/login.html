@@ -1,0 +1,44 @@
+<ion-header no-border>
+  <ion-navbar transparent>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <div class="login-container">
+    <img class="logo" src="assets/imgs/logo.png"/>
+    <form [formGroup]="loginForm">
+
+      <ion-item mode="ios">
+        <ion-label mode="ios" floating>Email</ion-label>
+        <ion-input mode="ios" tappable color="light" type="email" formControlName="email" [(ngModel)]="email">
+        </ion-input>
+      </ion-item>
+
+      <ion-item mode="ios">
+        <ion-label mode="ios" floating>Password</ion-label>
+        <ion-input mode="ios" tappable type="password" formControlName="password" [(ngModel)]="password">
+        </ion-input>
+      </ion-item>
+     
+      <div class="submit-box">
+        <button ion-button mode="ios" block color="blue" (click)="login()" [disabled]="!loginForm.valid">Log in</button>
+        <p text-center ion-text color="light" *ngIf="type=='user'">Or login with:</p>
+	      <ion-grid class="social-buttons" *ngIf="type=='user'">
+	        <ion-row>
+	          <button mode="ios" ion-button icon-only block class="col col-4" color="blue" (click)="facebookLogin()">
+	            <ion-icon name="logo-facebook"></ion-icon>
+	          </button>
+	          <button mode="ios" ion-button icon-only block class="col col-4" color="red" (click)="googleLogin()">
+	            <ion-icon name="logo-googleplus"></ion-icon>
+	          </button>
+	        </ion-row>
+	      </ion-grid>
+        <button class="bottom" ion-button mode="ios" type="button" clear full color="light" (click)="resetPassword()">Forgot your password?</button>
+        <button ion-button type="button" mode="ios" block icon-left color="light" outline (click)="signup()">
+          <ion-icon name="ios-create"></ion-icon> Create new account
+        </button>
+      </div>
+
+    </form>
+  </div>
+</ion-content>

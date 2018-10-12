@@ -1,0 +1,38 @@
+page-donation {
+
+	.item {
+		padding: 0px;
+		margin-bottom: 15px;
+	}
+
+	.label {
+		font-size: 14px !important;
+		margin: 0px;
+	}
+
+  .toggle {
+		padding-left: 0px;
+		display: block;
+	}
+
+	.toggle-ios {
+		height: 26px;
+    margin-top: 8px;
+    margin-bottom: 20px;
+    width: 45px;
+
+    .toggle-inner {
+    	width: 22px;
+			height: 22px;
+    }
+	}
+
+	.toggle-md {
+		padding-top: 8px;
+		padding-bottom: 20px;
+	}
+
+	[ion-button] {
+		margin: 0px;
+	}
+}

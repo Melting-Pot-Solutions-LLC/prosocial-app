@@ -1,0 +1,19 @@
+<ion-header no-border>
+  <ion-navbar transparent>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <video id="video" webkit-playsinline playsinline autoplay loop muted poster="assets/imgs/video-poster.jpg" preload="auto">  
+    <source src="assets/videos/video.webm" type="video/webm">
+    <source src="assets/videos/video.mp4" type="video/mp4">
+  </video> 
+  <div select-user-container>
+    <div margin-bottom>
+      <img src="assets/imgs/logo.png"/>
+    </div>
+    <div margin-top>
+      <button ion-button mode="ios" block margin-top margin-bottom *ngFor="let button of buttons" (click)="openPage(button.type)" [color]="button.color">{{ button.text }}</button>
+    </div>
+  </div>
+</ion-content>

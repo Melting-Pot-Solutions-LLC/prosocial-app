@@ -1,0 +1,52 @@
+<ion-header>
+  <ion-navbar color="green">
+  	<ion-title color="light">{{ pageTitle }} Profile</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+
+	<form [formGroup]="businessEditForm">
+
+	  <ion-label mode="ios" image-label>Add Photo</ion-label>
+		<img class="logo" *ngIf="profile.photoImg" [src]="profile.photoImg" (click)="loadPhotoImg()"/>
+		<ion-icon name="ios-add-circle-outline" image-icon *ngIf="!profile.photoImg" (click)="loadPhotoImg()"></ion-icon>
+
+	  <ion-label mode="ios" image-label>Add Logo</ion-label>
+		<img class="logo" *ngIf="profile.logoImg" [src]="profile.logoImg" (click)="loadLogoImg()"/>
+		<ion-icon name="ios-add-circle-outline" image-icon *ngIf="!profile.logoImg" (click)="loadLogoImg()"></ion-icon>
+
+	  <ion-item mode="ios">
+	    <ion-label mode="ios" stacked>Description</ion-label>
+		  <ion-textarea mode="ios" rows="4" formControlName="description" [(ngModel)]="profile.description"></ion-textarea>
+	  </ion-item>
+
+	  <ion-item mode="ios">
+	    <ion-label mode="ios" stacked>Website</ion-label>
+		  <ion-input mode="ios" type="text" formControlName="website" [(ngModel)]="profile.website"></ion-input>
+	  </ion-item>
+
+	  <ion-item mode="ios">
+	    <ion-label mode="ios" stacked>Address</ion-label>
+		  <ion-input mode="ios" type="text" formControlName="address" [(ngModel)]="profile.address"></ion-input>
+	  </ion-item>
+
+	</form>
+
+  <ion-item mode="ios">
+    <ion-label mode="ios" stacked>Sale (%)</ion-label>
+	  <ion-input mode="ios" type="number" [(ngModel)]="profile.sale"></ion-input>
+  </ion-item>
+
+  <ion-item mode="ios">
+    <ion-label mode="ios" stacked>Sale Categories</ion-label>
+	  <ion-select mode="ios" multiple="true" [(ngModel)]="profile.nonprofits">
+	    <ion-option *ngFor="let category of categories" value="{{ category.id }}">
+		  	{{ category.name }}
+	    </ion-option>
+	  </ion-select>
+  </ion-item>
+
+  <button mode="ios" ion-button block color="green" (click)="save()" [disabled]="!(businessEditForm.valid && profile.photoImg && profile.logoImg && ((profile.sale && profile.nonprofits.length) || (!profile.sale && !profile.nonprofits.length)))">{{ buttonTitle }}</button>
+
+</ion-content>

@@ -1,0 +1,22 @@
+page-card-detail {
+
+  .item {
+    padding-left: 0;
+  }
+
+  .grid {
+  	padding: 0px;
+  	margin-bottom: 15px;
+
+	  .split-row {
+
+	    .col:first-child {
+	      padding-left: 0;
+	    }
+
+	    .col:last-child {
+	      padding-right: 0;
+	    }
+	  }
+  }
+}

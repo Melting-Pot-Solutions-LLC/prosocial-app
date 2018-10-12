@@ -1,0 +1,18 @@
+<ion-header>
+  <ion-navbar color="green">
+  	<ion-title color="light">Business</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <ion-list mode="ios" *ngIf="items && items.length">
+    <ion-item mode="ios" *ngFor="let item of items" (click)="goToDetail(item)">
+      <ion-thumbnail item-left>
+        <img [src]="item.logoImg">
+      </ion-thumbnail>
+      <h2>{{ item.name }}</h2>
+      <p *ngIf="item.sale">Sale {{ item.sale }}%</p>
+    </ion-item>
+  </ion-list>
+  <p no-data-label *ngIf="items && !items.length">No data.</p>
+</ion-content>

@@ -1,0 +1,34 @@
+<ion-header>
+  <ion-navbar color="green">
+    <ion-buttons start *ngIf="modal">
+      <button ion-button (click)="closeModal()">Done</button>
+    </ion-buttons>
+  	<ion-title color="light">Card Settings</ion-title>
+    <ion-buttons end>
+      <button mode="ios" ion-button (click)="addCard()">
+        <ion-icon name="md-add" color="light"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <ion-list mode="ios" *ngIf="cards && cards.length">
+		<ion-item-sliding *ngFor="let card of cards">
+			<ion-item mode="ios">
+				<p><span>Card Number: </span>{{ card.cardNumber | cardNumber: 4 }}</p>
+				<p><span>Expiration Date: </span>{{ card.expMonth }}/{{ card.expYear }}</p>
+				<p><span>CVC: </span>{{ card.cvc }}</p>
+			</ion-item>
+	    <ion-item-options side="right">
+	      <button mode="ios" ion-button color="green" (click)="editCard(card)">
+	        Update
+	      </button>
+	      <button mode="ios" ion-button color="danger" (click)="removeCard(card)">
+	        Remove
+	      </button>
+	    </ion-item-options>
+	  </ion-item-sliding>
+  </ion-list>
+  <p no-data-label *ngIf="cards && !cards.length">No data.</p>
+</ion-content>

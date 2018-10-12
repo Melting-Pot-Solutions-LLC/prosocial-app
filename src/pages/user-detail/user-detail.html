@@ -1,0 +1,21 @@
+<ion-header no-border>
+  <ion-navbar transparent>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <div class="login-container">
+    <div profile-info>
+      <img src="assets/imgs/avatar.jpeg"/>
+      <h4 ion-text color="light">{{ profile.name }}</h4>
+      <p>Silver level</p>
+      <button mode="ios" ion-button outline color="light" (click)="edit()">edit</button>
+    </div>
+    <div profile-buttons>
+      <button mode="ios" ion-item *ngFor="let button of buttons" (click)="openPage(button.page)" [disabled]="!button.page">
+        {{ button.text }}
+      </button>
+      <button mode="ios" ion-item (click)="logout()">Logout</button>
+    </div>
+  </div>
+</ion-content>

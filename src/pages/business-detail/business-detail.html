@@ -1,0 +1,29 @@
+<ion-header no-border>
+  <ion-navbar transparent [hidden]="showToolbar"> 
+    <ion-title>{{ item.name }}</ion-title>
+    <ion-buttons end>
+      <button ion-button (click)="edit()" *ngIf="isHomePage">
+        Edit
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+<ion-content no-padding class="content" (ionScroll)="onScroll($event)" [class.transition]="transition">
+  <div class="profile-header" [ngStyle]="{'background-image': 'url(' + item.photoImg + ')'}"></div>
+  <div class="profile">
+    <div class="profile-box">
+    	
+      <ion-img class="profile-image" [src]="item.logoImg"></ion-img>
+      <h3>{{ item.name }}</h3>
+      <p [ngClass]="item.level.toLowerCase() + '-level'">{{ item.level }} level</p>
+      <p>{{ item.description }}</p>
+      <p><span>Website:</span> <a (click)="openWebsite(item.website)">{{ item.website }}</a></p>
+      <p><span>Address:</span> {{ item.address }}</p>
+      <p *ngIf="item.sale"><span>Sale:</span> {{ item.sale }}%</p>
+      <p *ngIf="item.sale"><span>Support of nonprofit organizations:</span> {{ item.nonprofits }}</p>
+
+      <button mode="ios" ion-button block color="primary" *ngIf="isHomePage" (click)="logout()">Logout</button>
+    </div>
+  </div>
+</ion-content>

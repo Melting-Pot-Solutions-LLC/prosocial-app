@@ -1,0 +1,34 @@
+page-registration-fee {
+
+  .item {
+    padding-left: 0;
+  }
+
+	[block-label] {
+		margin-top: 25px;
+	}
+
+  .grid {
+  	padding: 0px;
+  	margin-bottom: 15px;
+
+	  .split-row {
+
+	    .col:first-child {
+	      padding-left: 0;
+	    }
+
+	    .col:last-child {
+	      padding-right: 0;
+	    }
+	  }
+  }
+
+  [radio-group] {
+  	margin: 0px 0px 15px;
+
+  	.item {
+  		border: none !important;
+  	}
+  }
+}

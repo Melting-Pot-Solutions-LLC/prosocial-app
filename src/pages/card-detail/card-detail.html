@@ -1,0 +1,29 @@
+<ion-header>
+  <ion-navbar color="green">
+    <ion-title>{{ pageTitle }} Card</ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content padding>
+  <ion-grid>
+    <ion-row>
+      <ion-item mode="ios">
+        <ion-input mode="ios" [card-mask]="card.cardNumber" type="text" [(ngModel)]="card.cardNumber" size="20" placeholder="Card Number"></ion-input>
+      </ion-item>
+    </ion-row>
+    <ion-row class="split-row">
+      <ion-col col-6>
+        <ion-item mode="ios">
+          <ion-input mode="ios" type="text" [(ngModel)]="card.exp" size="5" placeholder="Expiry(mm/yy)"></ion-input>
+        </ion-item>
+      </ion-col>
+      <ion-col col-6>
+        <ion-item mode="ios">
+          <ion-input mode="ios" type="text" [(ngModel)]="card.cvc" size="4" placeholder="CVC"></ion-input>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+  <button mode="ios" ion-button block color="green" (click)="save()" [disabled]="!(card.cardNumber && card.cvc && cardExpIsValid())">Save</button>
+</ion-content>

@@ -1,0 +1,50 @@
+<ion-header no-border>
+  <ion-navbar transparent>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <div class="login-container">
+    <img class="logo" [src]="profile.image" (click)="loadPhoto()" *ngIf="profile.image"/>
+    <ion-icon name="ios-add-circle-outline" image-icon (click)="loadPhoto()" *ngIf="!profile.image"></ion-icon>
+    <form [formGroup]="registerForm">
+
+      <ion-item mode="ios">
+        <ion-label mode="ios" stacked>Name</ion-label>
+        <ion-input mode="ios" tappable formControlName="name" type="text" placeholder="Your name" [(ngModel)]="profile.name"></ion-input>
+      </ion-item>
+
+      <ion-item mode="ios">
+        <ion-label mode="ios" stacked>Email</ion-label>
+        <ion-input mode="ios" tappable formControlName="email" type="email" placeholder="Your email address" [(ngModel)]="profile.email" [disabled]="editMode"></ion-input>
+      </ion-item>
+
+      <ion-item mode="ios" *ngIf="type=='user'">
+        <ion-label mode="ios" stacked>Phone</ion-label>
+        <ion-input mode="ios" tappable formControlName="phone" type="tel" placeholder="Phone number" [(ngModel)]="profile.phone"></ion-input>
+      </ion-item>
+
+      <ion-item mode="ios">
+        <ion-label mode="ios" stacked>Password</ion-label>
+        <ion-input mode="ios" tappable formControlName="password" type="password" placeholder="Your password" [(ngModel)]="profile.password"></ion-input>
+      </ion-item>
+
+      <div class="submit-box">
+      	<button ion-button full mode="ios" color="blue" (click)="register()" [disabled]="!(registerForm.valid && profile.image)" *ngIf="!editMode">Create an Account</button>
+      	<button ion-button full mode="ios" color="blue" (click)="save()" [disabled]="!(registerForm.valid && profile.image)" *ngIf="editMode">Save</button>
+        <p text-center ion-text color="light" *ngIf="(type=='user') && !editMode">Or sign up with:</p>
+	      <ion-grid class="social-buttons" *ngIf="(type=='user') && !editMode">
+	        <ion-row>
+	          <button mode="ios" ion-button icon-only block class="col col-4" color="blue" (click)="facebookRegister()">
+	            <ion-icon name="logo-facebook"></ion-icon>
+	          </button>
+	          <button mode="ios" ion-button icon-only block class="col col-4" color="red" (click)="googleRegister()">
+	            <ion-icon name="logo-googleplus"></ion-icon>
+	          </button>
+	        </ion-row>
+	      </ion-grid>
+      </div>
+
+    </form>
+  </div>
+</ion-content>

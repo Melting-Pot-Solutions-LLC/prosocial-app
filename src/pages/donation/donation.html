@@ -1,0 +1,35 @@
+<ion-header>
+  <ion-navbar color="green">
+  	<ion-title color="light">Donation</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+
+	<form [formGroup]="donationForm">
+
+	  <ion-item mode="ios">
+	    <ion-label mode="ios" stacked *ngIf="cards.length">Select Card</ion-label>
+	    <ion-label mode="ios" stacked *ngIf="!cards.length" (click)="addCard()">Add Card</ion-label>
+		  <ion-select mode="ios" formControlName="selectedCard" [(ngModel)]="selectedCard" [selectOptions]="cardSelectOptions" *ngIf="cards.length">
+		    <ion-option *ngFor="let card of cards" value="{{ card.id }}">
+			  	{{ card.cardNumber | cardNumber: 4 }}
+			  	Expiration Date: {{ card.expMonth }}/{{ card.expYear }}
+			  	CVC: {{ card.cvc }}
+		    </ion-option>
+		  </ion-select>
+	  </ion-item>
+
+	  <ion-item mode="ios">
+	    <ion-label mode="ios" stacked>Donation Amount ($)</ion-label>
+		  <ion-input mode="ios" type="number" formControlName="amount" [(ngModel)]="amount"></ion-input>
+	  </ion-item>
+
+	</form>
+
+  <ion-label mode="ios">Auto Draft</ion-label>
+  <ion-toggle color="green" [(ngModel)]="autoDraft" (ionChange)="autoDraftChanged(autoDraft)" [disabled]="!(selectedCard || amount)"></ion-toggle>
+
+  <button mode="ios" ion-button block color="green" (click)="oneTimeDonate()" [disabled]="!donationForm.valid">One Time Donation</button>
+
+</ion-content>

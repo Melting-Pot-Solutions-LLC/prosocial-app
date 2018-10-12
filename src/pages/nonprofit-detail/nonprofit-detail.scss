@@ -1,0 +1,129 @@
+page-nonprofit-detail {
+
+  .scroll-content {
+    margin-top: 0 !important;
+    padding-top: 44px;
+  }
+
+  .toolbar {
+
+  	button {
+  		color: color($colors, light);
+  	}
+
+	  .toolbar-title {
+	    color: color($colors, light);
+	  }
+  }
+
+  .profile-header {
+    position: relative;
+    height: 240px;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+  }
+
+  .profile {
+    position: relative;
+  }
+
+  .profile-box {
+    position: absolute;
+    padding:30px !important;
+    top: -95px;
+    width: 100%;
+    z-index: 2;
+    text-align: center;
+
+	  .profile-image {
+	    width: 115px;
+	    height: 115px;
+	    margin: 0 auto 0;
+	    border-width: 3px;
+	    border-style: solid;
+	    border-color: rgb(255, 255, 255);
+	    border-image: initial;
+
+	    img {
+		    height: 100%;
+		    width: 100%;
+	    }
+	  }
+
+	  h3 {
+	    font-size: 22px;
+	  }
+
+	  p {
+	  	text-align: initial;
+	  	margin: 0px;
+	  	margin-bottom: 15px;
+
+	  	span {
+	  		font-weight: 600;
+	  	}
+	  }
+
+	  h3, p {
+	  	color: #444;
+	  }
+
+	  .silver-level, .bronze-level {
+	  	text-align: center;
+	  	font-size: 15px;
+	  }
+
+	  .silver-level {
+	  	color: #C0C0C0;
+	  }
+
+	  .bronze-level {
+	  	color: #cd7f32;
+	  }
+
+	  button {
+	  	margin: 10px 0px;
+	  }
+
+  	[item-reviews] {
+  		margin: 0px;
+  		margin-top: -10px;
+
+  		.item {
+  			background-color: inherit;
+  			border: none;
+  			padding: 0px;
+
+  			.item-inner {
+  				border: none;
+  				padding: 0px;
+
+  				.label {
+						font-size: 1.5rem;
+						margin: 0px 0px 10px;
+
+			      .review-text {
+			      	white-space: normal;
+			      	margin: 0px;
+			      	margin-bottom: 5px;
+			      	color: #666;
+			      	font-weight: 500;
+			      }
+
+			      .review-date {
+			      	color: #8e9093;
+			      	font-size: 1.2rem;
+			      	margin: 0px;
+			      }
+  				}
+  			}
+  		}
+  	}
+  }
+
+  .transition {
+    transition: font-size .3s ease-in;
+  }
+}

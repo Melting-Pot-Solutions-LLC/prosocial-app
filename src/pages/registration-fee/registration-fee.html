@@ -1,0 +1,45 @@
+<ion-header>
+  <ion-navbar color="green">
+    <ion-title>Registration Fee</ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content padding>
+
+	<form [formGroup]="registrationFeeForm">
+	  <ion-grid>
+	    <ion-row>
+	      <ion-item mode="ios">
+	        <ion-input mode="ios" type="text" formControlName="cardNumber" placeholder="Card Number" [card-mask]="cardNumber" [(ngModel)]="cardNumber" size="20"></ion-input>
+	      </ion-item>
+	    </ion-row>
+	    <ion-row class="split-row">
+	      <ion-col col-6>
+	        <ion-item mode="ios">
+	          <ion-input mode="ios" type="text" formControlName="cardExp" [(ngModel)]="cardExp" size="5" placeholder="Expiry(mm/yy)"></ion-input>
+	        </ion-item>
+	      </ion-col>
+	      <ion-col col-6>
+	        <ion-item mode="ios">
+	          <ion-input mode="ios" type="text" formControlName="cardCvc" [(ngModel)]="cardCvc" size="4" placeholder="CVC"></ion-input>
+	        </ion-item>
+	      </ion-col>
+	    </ion-row>
+	  </ion-grid>
+  </form>
+
+  <ion-label mode="ios" block-label>Pick A User Level</ion-label>
+	<ion-list mode="ios" radio-group [(ngModel)]="selectedLevel">
+	  <ion-item mode="ios" *ngFor="let level of levels">
+	    <ion-label mode="ios">
+		  	<p>{{ level.label }}</p>
+		  	<p>{{ level.price }}</p>
+	    </ion-label>
+	    <ion-radio mode="ios" color="green" [value]="level.name"></ion-radio>
+	  </ion-item>
+	</ion-list>
+
+	<button mode="ios" ion-button block color="green" (click)="submit()" [disabled]="!registrationFeeForm.valid">{{ buttonTitle }}</button>
+
+</ion-content>

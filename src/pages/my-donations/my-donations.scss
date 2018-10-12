@@ -1,0 +1,16 @@
+page-my-donations {
+	
+	img {
+		object-fit: cover;
+	}
+
+	h3 {
+		color: color($colors, green);
+		font-size: 1.8rem !important;
+		margin: 0px 8px 0px 0px !important;
+	}
+
+	[no-data-label] {
+		margin: 15px;
+	}
+}

@@ -1,0 +1,68 @@
+page-user-detail {
+
+  ion-content {
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-color: transparent;
+    background-image: url('../assets/imgs/bg.jpg');
+  }
+
+  .scroll-content {
+    margin-top: 0 !important;
+  }
+
+  .login-container {
+    color: white;
+    position: absolute;
+    top: 0;
+    padding: 10vw;
+    text-align: center;
+    width: 100%;
+    margin: 0 auto;
+    z-index: 2;
+  }
+
+  [profile-info] {
+
+	  img {
+	    width: 90px;
+	    height: 90px;
+	    border-radius: 50%;
+			margin-top: 2vh;
+	  }
+
+	  h4 {
+			margin: 10px 0px 5px;
+			font-size: 1.9rem;
+	  }
+
+	  p {
+	  	color: #C0C0C0;
+	  	margin: 0px 0px 15px;
+	  }
+
+	  button {
+	    border-radius: 10px;
+	    height: 1.8em;
+	    margin: 0px;
+	    margin-bottom: 15px;
+	  }
+  }
+
+  [profile-buttons] {
+
+  	.item {
+			background-color: transparent;
+			color: color($colors, light);
+			border-color: color($colors, light);
+			padding: 0px;
+  	}
+
+  	.item:last-child {
+
+  		.item-inner {
+  			border: none;
+  		}
+  	}
+  }
+}

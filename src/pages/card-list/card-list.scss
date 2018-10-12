@@ -1,0 +1,15 @@
+page-card-list {
+
+	p {
+		font-size: 1.3rem;
+		white-space: normal;
+
+		span {
+			font-weight: 600;
+		}
+	}
+
+	[no-data-label] {
+		margin: 15px;
+	}
+}
