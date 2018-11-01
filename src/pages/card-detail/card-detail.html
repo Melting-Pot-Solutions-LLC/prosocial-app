@@ -1,5 +1,5 @@
 <ion-header>
-  <ion-navbar color="green">
+  <ion-navbar color="primary">
     <ion-title>{{ pageTitle }} Card</ion-title>
   </ion-navbar>
 </ion-header>
@@ -25,5 +25,5 @@
       </ion-col>
     </ion-row>
   </ion-grid>
-  <button mode="ios" ion-button block color="green" (click)="save()" [disabled]="!(card.cardNumber && card.cvc && cardExpIsValid())">Save</button>
+  <button mode="ios" ion-button block color="primary" (click)="save()" [disabled]="!(card.cardNumber && card.cvc && cardExpIsValid())">Save</button>
 </ion-content>

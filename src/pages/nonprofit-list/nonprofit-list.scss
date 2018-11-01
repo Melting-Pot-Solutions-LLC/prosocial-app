@@ -24,12 +24,12 @@ page-nonprofit-list {
 
   [_nghost-c0] {
     font-size: 14px;
-    color: color($colors, green);
+    color: color($colors, primary);
     padding: 8px 10px;
   }
 
   tag[_ngcontent-c0] {
-  	background-color: color($colors, green);
+  	background-color: color($colors, primary);
   	color: color($colors, light);
 		height: 32px;
 		line-height: 32px;

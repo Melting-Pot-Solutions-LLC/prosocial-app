@@ -66,7 +66,7 @@ export class SignupPage {
   		this.navCtrl.setRoot('user-detail-page')
   	}
   	else
-  		this.navCtrl.setRoot(this.type + '-edit-page', { type: this.type });
+  		this.navCtrl.push(this.type + '-edit-page', { type: this.type });
   }
 
   facebookRegister() {

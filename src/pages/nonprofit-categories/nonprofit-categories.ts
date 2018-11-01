@@ -18,15 +18,15 @@ export class NonprofitCategoriesPage {
 	}, {
 		id: 1,
 		name: 'Medicine',
-		imgSmall: 'https://mon.medikforum.ru/uploads/posts/2017-11/1510931305_medicina.jpg'
+		imgSmall: 'http://cdn.24.co.za/files/Cms/General/d/1936/6027f9e09d4d4138abc8deadc68d31e9.jpg'
 	}, {
 		id: 2,
 		name: 'Science',
-		imgSmall: 'https://masheka.by/uploads/posts/2017-07/1501513271_nauka_mogilev.jpg'
+		imgSmall: 'https://www.macleans.ca/wp-content/uploads/2013/01/158630363-1.jpg'
 	}, {
 		id: 3,
 		name: 'Culture',
-		imgSmall: 'https://kultyres.ru/wp-content/uploads/2017/12/8n97b6546x3cv-300x225.jpg'
+		imgSmall: 'https://imgc.artprintimages.com/img/print/singapore-chinatown-sri-mariamman-hindu-temple-hindu-deity-detail_u-l-q13bqmr0.jpg'
 	}];
 	items: Array<any>;
 	selectedKeys: Array<any> = [];

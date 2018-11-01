@@ -17,7 +17,7 @@ export class NonprofitListPage {
 	loadedItems: Array<any> = [{
 		id: 1,
 		name: 'Nonprofit 1',
-		logoImg: 'https://d1bile9su2eskg.cloudfront.net/wp-content/uploads/2014/09/Screen-Shot-2014-09-03-at-2.48.56-PM.png',
+		logoImg: 'https://s3.amazonaws.com/gv2016wp/wp-content/uploads/20160402193724/160402-Marketing-for-Non-Profits-PIN-735x1000.png',
 		photoImg: 'https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/New_york_times_square-terabass.jpg/640px-New_york_times_square-terabass.jpg',
 		description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
 		website: 'https://nonprofit1.com',
@@ -43,7 +43,7 @@ export class NonprofitListPage {
 	}, {
 		id: 2,
 		name: 'Nonprofit 2',
-		logoImg: 'https://www.sageintacct.com/sites/default/files/field/image/nonprofit-image_0.jpg',
+		logoImg: 'https://www.publicadmincareers.com/wp-content/uploads/2016/06/PUBLIC_non-profit_v1-199x300.png',
 		photoImg: 'https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/New_york_times_square-terabass.jpg/640px-New_york_times_square-terabass.jpg',
 		description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
 		website: 'https://nonprofit2.com',
@@ -95,7 +95,7 @@ export class NonprofitListPage {
 	}, {
 		id: 4,
 		name: 'Nonprofit 4',
-		logoImg: 'https://texarkana.org/wp-content/uploads/2017/03/Non-profit-partners-hands-with-hearts-clip-art.png',
+		logoImg: 'https://boardsource.org/wp-content/uploads/2018/04/WC-Nonprofit-Dashboard-Cover.png',
 		photoImg: 'https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/New_york_times_square-terabass.jpg/640px-New_york_times_square-terabass.jpg',
 		description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
 		website: 'https://nonprofit4.com',

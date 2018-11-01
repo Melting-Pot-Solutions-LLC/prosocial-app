@@ -32,12 +32,12 @@
 			  	<p class="review-date">By {{ review.from.substring(0, 2) }}*** on {{ review.date | amLocal | amDateFormat: "LL" }}</p>
 			  </ion-item>
 			</ion-list>
-      <button mode="ios" ion-button block color="green" *ngIf="!following && !isHomePage" (click)="follow()">Follow</button>
+      <button mode="ios" ion-button block color="primary" *ngIf="!following && !isHomePage" (click)="follow()">Follow</button>
       <button mode="ios" ion-button icon-left block color="gray" *ngIf="following && !isHomePage" (click)="follow()">
         <ion-icon name="ios-checkmark"></ion-icon>
         Following
       </button>
-      <button mode="ios" ion-button block color="primary" *ngIf="!isHomePage" (click)="donate()">Donate</button>
+      <button mode="ios" ion-button block color="green" *ngIf="!isHomePage" (click)="donate()">Donate</button>
       <button mode="ios" ion-button block color="primary" *ngIf="isHomePage" (click)="logout()">Logout</button>
     </div>
   </div>

@@ -1,5 +1,5 @@
 <ion-header>
-  <ion-navbar color="green">
+  <ion-navbar color="primary">
   	<ion-title color="light">Donation</ion-title>
   </ion-navbar>
 </ion-header>
@@ -28,8 +28,8 @@
 	</form>
 
   <ion-label mode="ios">Auto Draft</ion-label>
-  <ion-toggle color="green" [(ngModel)]="autoDraft" (ionChange)="autoDraftChanged(autoDraft)" [disabled]="!(selectedCard || amount)"></ion-toggle>
+  <ion-toggle color="primary" [(ngModel)]="autoDraft" (ionChange)="autoDraftChanged(autoDraft)" [disabled]="!(selectedCard || amount)"></ion-toggle>
 
-  <button mode="ios" ion-button block color="green" (click)="oneTimeDonate()" [disabled]="!donationForm.valid">One Time Donation</button>
+  <button mode="ios" ion-button block color="primary" (click)="oneTimeDonate()" [disabled]="!donationForm.valid">One Time Donation</button>
 
 </ion-content>

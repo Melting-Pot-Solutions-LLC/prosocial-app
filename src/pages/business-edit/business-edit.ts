@@ -127,7 +127,7 @@ export class BusinessEditPage {
 		this.profile.nonprofits = this.categories.filter(category => this.profile.nonprofits.indexOf(category.id.toString()) != -1).map(category => category.name.toLowerCase());
 		if (this.type) {
 			console.log('registrationFee', this.profile);
-			this.navCtrl.setRoot('registration-fee-page', { type: this.type });
+			this.navCtrl.push('registration-fee-page', { type: this.type });
 		}
 		else {
 			console.log('save', this.profile);

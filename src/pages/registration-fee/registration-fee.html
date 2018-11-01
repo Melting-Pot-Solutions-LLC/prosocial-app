@@ -1,5 +1,5 @@
 <ion-header>
-  <ion-navbar color="green">
+  <ion-navbar color="primary">
     <ion-title>Registration Fee</ion-title>
   </ion-navbar>
 </ion-header>
@@ -36,10 +36,10 @@
 		  	<p>{{ level.label }}</p>
 		  	<p>{{ level.price }}</p>
 	    </ion-label>
-	    <ion-radio mode="ios" color="green" [value]="level.name"></ion-radio>
+	    <ion-radio mode="ios" color="primary" [value]="level.name"></ion-radio>
 	  </ion-item>
 	</ion-list>
 
-	<button mode="ios" ion-button block color="green" (click)="submit()" [disabled]="!registrationFeeForm.valid">{{ buttonTitle }}</button>
+	<button mode="ios" ion-button block color="primary" (click)="submit()" [disabled]="!registrationFeeForm.valid">{{ buttonTitle }}</button>
 
 </ion-content>

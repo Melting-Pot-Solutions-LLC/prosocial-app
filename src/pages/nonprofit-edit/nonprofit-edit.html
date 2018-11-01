@@ -1,5 +1,5 @@
 <ion-header>
-  <ion-navbar color="green">
+  <ion-navbar color="primary">
   	<ion-title color="light">{{ pageTitle }} Profile</ion-title>
   </ion-navbar>
 </ion-header>
@@ -37,6 +37,6 @@
 
 	</form>
 
-  <button mode="ios" ion-button block color="green" (click)="save()" [disabled]="!(nonprofitEditForm.valid && profile.photoImg && profile.logoImg && profile.documentImg)">{{ buttonTitle }}</button>
+  <button mode="ios" ion-button block color="primary" (click)="save()" [disabled]="!(nonprofitEditForm.valid && profile.photoImg && profile.logoImg && profile.documentImg)">{{ buttonTitle }}</button>
 
 </ion-content>
